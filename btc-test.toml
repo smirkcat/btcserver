@@ -1,0 +1,22 @@
+### btc 钱包代理配置文件
+
+rpc_host="192.168.1.11"
+rpc_port="18332" 
+rpc_user="user"
+rpc_pwd="8e7OmEaXPalNB7kvoFnsuGhjfu1YI5ajVa4vKoPD" 
+wallet_pwd="789456123" #钱包加密密码
+main_addr="2MvyN7B8pyYdD2g8nj7owinoeDiv7yyxfKu" # 主账户地址
+symbol="btc" # 钱包代理币种类型
+precision=8 # 精度暂时没用
+db_addr="btc.db" #btcserver相同录下保存地址得db文件
+monitor_port=10332 # rpc监听端口
+collect_min=0.001 # 最小归集数量
+scantrans_time_interval=60 #交易记录扫描间隔 单位秒
+# 归集检测cron表达式 
+collect_cron="0 0 * * *" #每天零点
+
+# 用法 https://godoc.org/github.com/robfig/cron
+# @hourly 每小时 不建议使用
+# @every 1h30m 每一小时30分钟 不建议使用
+# 30 * * * * 每个小时30分执行 可以用于测试环境测试
+# 0 0 * * * 每天零点执行 正式环境测试

@@ -1,0 +1,21 @@
+### bch 钱包代理配置文件
+
+rpc_host="192.168.1.32"
+rpc_port="18332" 
+rpc_user="wawawa"
+rpc_pwd="123456789"
+wallet_pwd="123qweasdzxc"
+main_addr="bchtest:qzfmw68rkvxzfzqqe7jxnsx4jcqf8wp7u5tsf0797c"
+symbol="bch"
+precision=8
+db_addr="bch.db"
+monitor_port=10334
+collect_min=0.001
+scantrans_time_interval=60
+# 归集检测cron表达式 
+collect_cron="0 0 * * *" #每天零点
+
+# 用法 https://godoc.org/github.com/robfig/cron
+# @hourly 每小时 不建议使用
+# 30 * * * * 每个小时30分执行 可以用于测试环境测试
+# 0 0 * * * 每天零点执行 正式环境测试

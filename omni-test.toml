@@ -1,0 +1,22 @@
+### omni 钱包代理配置文件
+# 192.168.1.15
+# 6543
+
+rpc_host="192.168.1.4"
+rpc_port="8333" 
+rpc_user="admin"
+rpc_pwd="123456"
+wallet_pwd="" #钱包加密密码
+main_addr="mwAzHKfEEvtXHR7ZttDjLnBzV5yjP9b7nZ" #钱包主地址 提币地址
+fee_addr="n3V1FowaAxWV68LJp5xJhR1qEbyfsD29kC" #钱包手续费地址
+propertyid=1 #测试环境 1 或 2 正式环境31
+symbol="USDT"
+precision=8
+db_addr="omni.db" # 主钱包账户数据库 目前可以使用备份数据库 后期功能上全可以全部替换
+fee_min=0.000035 # 最小单次手续费单位 btc
+collect_min=2 # 最小代币归集数量
+collect_time_interval=30 # 归集检测时间间隔 单位分钟
+monitor_port=6543 # 监听端口
+scantrans_time_interval=60 #交易记录扫描间隔时间 单位秒
+log_level = "info"
+satoshi_per_byte=50 # 归集每字节最花费检测单位 最小5 默认5
